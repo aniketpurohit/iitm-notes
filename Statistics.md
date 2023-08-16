@@ -45,7 +45,7 @@ For an integer $`n \geq 2`$, let $`A_1, A_2, .. ,A_n`$ be a collection of events
 
 ## Baye's Theorem 
 Suppose A is an event, $`\{ B_i : 1 \leq i \leq n \}`$ are a collection of disjoint events whose union contains all of A. Futher assume that P(A) > 0 and $`P(B_i) > 0`$ for all $`1 \leq i \leq n`$. Then for any $`1 \leq i \leq n`$,
-$`P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum^n_{j=1} P(A|B_j) P(B_j)`$
+$`P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum^n_{j=1} P(A|B_j)} P(B_j)`$
 
 **Independence**
 Two events A dnd B are independent if $`P(A \cap B) = P(A)P(B)`$.

@@ -24,5 +24,14 @@ Explanation:
 5. If E and F are events then P(E $`\cup`$ F) = P(E) + P(F) - P(E $`\cap`$ F).
 
 Proof of (1) 
+The empty set is disjoint from itself, so $`\varnothing`$  is a countable disjoint collection of events. 
 
+**Equally Likely Outcomes**
+When Sample space of only a countable collection of outcomes, describing the probability of each individual outcome is sufficient to describe the penalty of all events. This is because if A $`\subset`$ S we may simply compute P(A) = P($`\cup_{w \in A} \{w\}`$) = $`\sum_{w \in A} P(\{w\})`$ 
 
+**Uniform** 
+Let S = {$`w_1, w_2, .. w_n`$} be a non-empty collection of disjoint events. If E $`\subset`$ S is any subset of S, let P(E) = $`\frac{|E|}{|S|}`$ (*where |E| represent the number of elements in E*) Then P defines a probability on S and P assigns probability to each individual outcome in S.
+Finally, let w $`\in `$ S be any single coutcome and let E = {w}. Then P (E) = $`\frac{1}{|S|}`$, so every outcome in S is equally likely. 
+
+## Conditional Probability and Baye's Theorem 
+Let S be a sample space with probability P. Let A and B two events with P(B) > 0. Then the conditional probability of A given B written as P(A|B) and is defined by $`\frac{P(A \cap B)}{P(B)}`$

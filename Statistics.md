@@ -35,3 +35,20 @@ Finally, let w $`\in `$ S be any single coutcome and let E = {w}. Then P (E) = $
 
 ## Conditional Probability and Baye's Theorem 
 Let S be a sample space with probability P. Let A and B two events with P(B) > 0. Then the conditional probability of A given B written as P(A|B) and is defined by $`\frac{P(A \cap B)}{P(B)}`$
+
+***Theorem :***
+Let A be an event and let $`\{ B_i : 1 \leq i \leq n \}`$ be a disjoint collection of events for which $`P(B_i) > 0 `$ for all i and such that $`A \subset \cup_{i=1}^n B_i `$. Suppose $`P(B_i)`$ and $`P(A|B_i)`$ are known, Then P (A)  may be computed as 
+$`P(A) = \sum_{i=1}^n P(A|B_i) P(B_i)`$
+
+***Theorem :***
+For an integer $`n \geq 2`$, let $`A_1, A_2, .. ,A_n`$ be a collection of events of which $`P(\cap^{j-1}_{j=1} A_j) = P(A1) . \pi^n_{j=2} P(A_j |(\cap^{j-1}_{k=1} A_k) `$
+
+## Baye's Theorem 
+Suppose A is an event, $`\{ B_i : 1 \leq i \leq n \}`$ are a collection of disjoint events whose union contains all of A. Futher assume that P(A) > 0 and $`P(B_i) > 0`$ for all $`1 \leq i \leq n`$. Then for any $`1 \leq i \leq n`$,
+$`P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum^n_{j=1} P(A|B_j) P(B_j)`$
+
+**Independence**
+Two events A dnd B are independent if $`P(A \cap B) = P(A)P(B)`$.
+
+
+

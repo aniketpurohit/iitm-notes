@@ -3,9 +3,14 @@
 **Sample space** 
 A sample space S is a set. The elements of the set S will be called "outcomes" and should be viewed as a listing of all possibilities that might occur. We will call the process of actually one of the outcomes an "experiement"
 
-**Event** 
+**Event**
+
+An event is a subset of the sample space. there is a technical resitriction on what subsets can be events. 
 Given a sample space S, an "event" is any subset E $`\subset`$ S
 "Event" includes both S, the sample space itself, and $`\varnothing`$, the empty set. 
+
+**Probability**
+function p that assigns to each event a real number between 0 to 1. The entire probability space (sample space, events and probablity function) should satisfy two axioms, which are specificed below.
 
 **Probability Space Axioms**
 Let S be a sample space and let F be collection of all events
@@ -59,3 +64,11 @@ is either $`A_j \text{ or }  A_j^c`$. An arbitary collection of events $`A_t`$, 
 # Sampling and Repeated Trails 
 
 ## Bernoulli Trials
+
+**setting** : occurence of Event A in a sample space is condidered "success". Non-occurence of A is considered "failure" Let p = P(A)
+
+Bernoulli Trial : Sample space is {Success, failure} with P(Success) = p
+This distribution is denoted Bernoulli(p)
+
+**Repeated Beroulli trial**
+

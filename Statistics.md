@@ -49,6 +49,13 @@ $`P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum^n_{j=1} P(A|B_j) P(B_j)`$
 
 **Independence**
 Two events A dnd B are independent if $`P(A \cap B) = P(A)P(B)`$.
+$`P(A|B) = P(A) = P(A|B^c)`$
+$`P(A_1 \cap A_2 \cap A_3) = P(A_1)P(A_2)P(A_3)`$
 
+**Mutual Indepedence**
+A finite collection of events $`A_1, A_2, ... A_n`$ is a mutuallly independence if $`P(E_1 \cap E_2 \cap .... \cap E_n) = P(E_1)P(E_2) ... P(E_n)`$ whenewver $`E_j`$
+is either $`A_j \text{ or }  A_j^c`$. An arbitary collection of events $`A_t`$, where t $`\in`$ I for some index set I is mutually independent if every finite subcollection is mutually independent.
 
+# Sampling and Repeated Trails 
 
+## Bernoulli Trials

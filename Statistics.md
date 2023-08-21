@@ -212,3 +212,20 @@ X ~ HyperGeo(N, r, m), Where N, r, m are positive integer
 Range of X $`X \in max(0, m - (N-r), ... min(r,m)`$
 PMF : $`f_x(k) = rC_k (N-r)C_{m-k} / Nc_m`$
 
+## Poisson random variable : Queues and meteorites
+
+### Function of a random variable 
+X : a random variaable with range T and PMF $`f_x(t)`$
+X : function from sampe space to T 
+T : subset of real line
+Let f(x) be a 
+
+
+
+# Two random variables
+
+## Joint PMF 
+ Suppose X and Y are discrete variables defined in the same proability space. Let the rage of X and Y be $`T_x`$ and $`T_y`$, respectively. The joint PMF of X and Y, denoted $`f_{XY}`$, is a function from $`T_x \times T_y`$ to [0,1] defined as 
+ $`f_{XY}(t_1, t_2) = P(X = t_1 and Y = t_2), t_1 \in T_X, t_2 \in T_Y`$
+- Joint PMF is usually written as a table or a matrix
+- 

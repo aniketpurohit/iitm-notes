@@ -22,11 +22,11 @@ Explanation:
 - for second axioms, probabilities add when combining a countable number of disjoint events. It is implicit that the series on right hand side of the equation converges.
 
 ## Basic properties 
-1. P($`\varnothing`$) = 0;
-2. If $`E_1, E_2, E_3 ... E_n`$ are finite collection of disjoint events, Then $`P(\cup_{j=1}^\infty E_j ) = \sum_{j=1}^\infty P(E_j)`$
-3. If E and F are events with $`E \subset F`$, then P(E) $`\leq`$ P(F).
-4. If E and F are events with $`E \subset F`$, then P(F\E) = P(F) - P(E);
-5. If E and F are events then P(E $`\cup`$ F) = P(E) + P(F) - P(E $`\cap`$ F).
+1. **Empty Set** :  P($`\varnothing`$) = 0;
+3.  **Complement** : If $`E_1, E_2, E_3 ... E_n`$ are finite collection of disjoint events, Then $`P(\cup_{j=1}^\infty E_j ) = \sum_{j=1}^\infty P(E_j)`$
+4. **Subset** : If E and F are events with $`E \subset F`$, then P(E) $`\leq`$ P(F).
+5.  **Difference and Intersection** : If E and F are events with $`E \subset F`$, then P(F\E) = P(F) - P(E);
+6.  **Union and Intersection** : If E and F are events then P(E $`\cup`$ F) = P(E) + P(F) - P(E $`\cap`$ F).
 
 Proof of (1) 
 The empty set is disjoint from itself, so $`\varnothing`$  is a countable disjoint collection of events. 
@@ -71,4 +71,24 @@ Bernoulli Trial : Sample space is {Success, failure} with P(Success) = p
 This distribution is denoted Bernoulli(p)
 
 **Repeated Beroulli trial**
+*Seting* Repeat a Bernoulli trial multiple times independently.
+Perform n independent Bernoulli(p) trials.
+Outcome : 0 or 1 (Trial 1), 0 or 1 (Trial 2) ... 0 or 1 (Trial n)
 
+> Probability use independence
+
+
+## Binomial(n,p) Distribution
+
+Perform n independent Bernoulli trials 
+Outcome number of success, which denoted B(n,p) or B in short 
+Sample Space (0,1,2, ..., n)
+
+| | B=0| B=1|B=2|B=3|B=4|B=5|B=6|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|n=1| 1-p| p||||||
+|n=2| $`(1-p)^2`$| $`2p(1-p)`$| $`p^2`$| ||||
+|n=3| $`(1-p)^3`$| $`3p(1-p)^2`$| $`3p^2(1-p)`$| $`p^3`$ ||||
+|n=4| $`(1-p)^4`$| $`4p(1-p)^3`$| $`6p^2(1-p)^2`$|$`4p^3(1-p)`$|$`p^4`$|||
+|n=5| $`(1-p)^5`$| $`5p(1-p)^4`$| $`10p^2(1-p)^3`$|$`10p^3(1-p)^2`$ |$`5p^4(1-p)`$|$`p^5`$||
+|n=6| $`(1-p)^6`$| $`6p(1-p)^5`$| $`15p^2(1-p)^4`$| $`15p^3(1-p)^3`$|$`15p^4(1-p)^2`$|$`6p^5(1-p)`$|$`p^6`$|

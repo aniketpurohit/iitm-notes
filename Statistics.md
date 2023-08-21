@@ -92,3 +92,123 @@ Sample Space (0,1,2, ..., n)
 |n=4| $`(1-p)^4`$| $`4p(1-p)^3`$| $`6p^2(1-p)^2`$|$`4p^3(1-p)`$|$`p^4`$|||
 |n=5| $`(1-p)^5`$| $`5p(1-p)^4`$| $`10p^2(1-p)^3`$|$`10p^3(1-p)^2`$ |$`5p^4(1-p)`$|$`p^5`$||
 |n=6| $`(1-p)^6`$| $`6p(1-p)^5`$| $`15p^2(1-p)^4`$| $`15p^3(1-p)^3`$|$`15p^4(1-p)^2`$|$`6p^5(1-p)`$|$`p^6`$|
+
+In general, B(n,p) = k 
+$`P(B(n,p) =k) = nC_k p^k (1-p)^{n-k} =\frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}`$
+> Some observation
+- Start at $`(1-p)^n`$  -> increases and reaches a peak -> fall to $`p^n`$
+- Peak is near $`np`$ Exactly at $`floor(p(n+1))`$
+- P(B=0) + P(B=1) + ... P(B=n) = 1
+
+## Geometric Distribution 
+Perform independent Bernoulli(p) trial indefinitely.
+**Outcome** : NUmber of trails needed for first success, which we denote G(p) or G
+**Sample space** : {1,2,3, ....}
+**P(G=k)** = P(first k-1 trials result in 0 and k-th trial is 1)= $`(1-p)^{k-1}p`$
+
+> Some Observation
+- Starts at p and keeps falling
+- Keeps on decreasing but if p<1, never goes all the way to zero
+- $`P(G \leq k) = P(G=1 or .. or G =k ) = p +(1-p)p + (1-p)^2p + ... + (1-p)^{k-1}p  = 1- (1-p)^k`$
+
+
+
+
+# Discrete Random Variables 
+ **Random Variable** numerical values computed from the outcomes of the experiment 
+A random variable is a function with domain as the sample space of an experiment and range as the real numbers. A function from sample space to real line. This technical condition that the function needs to satisfy, adn we will describe  that soon.
+
+**Random variable and events**
+If X is a random variable $`(X< x)= { s \in S : X(s)}`$ is an event for all real x So, $`(X>x) , (X=x), (X \leq x), (X \geq x)`$
+
+Instead of trying to assign probabilities to the entire outcome, we will usually study random variable and assign probability  to events defined through them. 
+- This reduce the detail in the outcome to something simpler.
+- Using limited data , only such random variables can ve studied.
+
+## Discrete random variable and their distributions
+The **Range of a random variable** is the set of values taken by it. Range is subset of the real line.
+
+A random variable is said to be discrete if its range is a discrete set.
+
+**distribution of discrete Probability mass function (PMF)**
+the probability mass function (PMF) of discrete random variable (r.v) X with range set T is the function $`f_x(t) = P(X= t) \text{for  } t \in T`$
+- (X = t)  is an event 
+  P(X =t) = P(all outcomes that result in X taking value t)
+- Let B be a subset of T. consider taht result in X taking values in B) = $`\sum_{t \in B} P(X=t)`$
+
+
+**Random Variable, Range and PMF**
+Random variable X with range T = $`{t_1 ,t_2, t_3 .., t_k}`$. PMF $`f_x`$
+| t | $`t_1`$| $`t_2`$|$`...`$ | $`t_k`$|
+|$`f_x(t)`$|  $`f_x(t_1)`$| $`f_x(t_2)`$| $`...`$| $`f_x(t_k)`$|
+
+> Properties of PMF
+- $`0 \leq f_x(t) \leq 1`$  ($`f_x(t) = P(X=t) `$ is a probability )
+- $`\sum_{t \in T} f_x(t) = 1`$ ($`P(X \in T) = 1`$)
+
+Often random variables and their PMFs are studied without much mention of experiment or sample space. 
+- Events are defined using random Variable
+- Prpbabilities evaluated using PMF.
+
+# Common Distribution 
+---
+## Uniform random variable
+X ~ Uniform(T), where T is some finite set
+Range: Finite set T 
+PMF : $`\frac{1}{|T|}`$ for all t $`\in T`$
+Example :
+- Toss a fair coin X ~ Uniform({0,1}), where 0 - heads and 1 -tails
+
+## Bernoulli random variable
+X ~ Bernoulli(p),  where $`0 \leq p \leq 1`$
+Range : {0,1}
+PMF : $`f_x(0) = 1 -p , f_x(1) = p`$
+Example 
+Bernoulli Trail, p = prob of success, X ~ Bernoulli (p)
+
+## Binomial random variable 
+X ~ Binomial(n,p), where n : positive integer, $`0 \leq p \leq 1`$
+Range : {0,1,2, ... n}
+PMF = $`f_x(k) = nC_k p^k (1-p)^{n-k}`$
+
+Example 
+- Number of successes in n independent Bernoulli(p) trials.
+- Check taht above PMF is valid
+  - $`nC_k p^k (1-p)^{n-k} \geq 0`$
+  - $`\sum nC_k p^k (1-p)^{n-k} = 1`$
+
+## Geometric random variable
+X ~ Geometric(p), where r: positive integer , $`0 < p \leq 1`$
+Range : {r, r+1 , r+2} 
+PMF : $`f_x(k) = (k-1)C_{r-1} (1-p)^{k-r} p^r`$
+
+Example
+- Number of trials for first success in repeated independent trials
+- check that above PMF is valid
+- Start at 0 : some use range as {0,1,2 ...} and $`f_x(k) = (1-p)^k p`$
+
+## Negative Binomial random variable 
+X ~ Negative Binomial (r,p) where r : positive number. $`0 < p \leq 1`$
+Range: {r, r+1, r+2 ..}
+PMF : $`f_k(k) = (k-1)C_{r-1} (1-p)^{k-r} p^r`$
+
+Example 
+- Number of trials for r success in repeated independent Bernoulli trials
+  - r= 1
+- Check that the above PMF is valid
+- 
+
+## Poission Random Variable
+X ~ Poisson($`\lambda`$) , where $`\lambda > 0 `$
+Range : {0,1,2, ...}
+PMF : $`f_x(k) =\frac{ e^{-\lambda} \lambda ^k} {k!}`$
+
+
+## HyperGeometric random variable
+X ~ HyperGeo(N, r, m), Where N, r, m are positive integer
+- Consider a population of "N" persons with r of Type-1 and "N-r"of type 2
+- select m persons uniformly at random without replacement
+- X= number of person Type 1 selected 
+Range of X $`X \in max(0, m - (N-r), ... min(r,m)`$
+PMF : $`f_x(k) = rC_k (N-r)C_{m-k} / Nc_m`$
+

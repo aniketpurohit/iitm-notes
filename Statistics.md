@@ -156,7 +156,7 @@ Often random variables and their PMFs are studied without much mention of experi
 X ~ Uniform(T), where T is some finite set
 Range: Finite set T 
 PMF : $`\frac{1}{|T|}`$ for all t $`\in T`$
-Example :
+Example :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 - Toss a fair coin X ~ Uniform({0,1}), where 0 - heads and 1 -tails
 
 ## Bernoulli random variable
@@ -169,7 +169,7 @@ Bernoulli Trail, p = prob of success, X ~ Bernoulli (p)
 ## Binomial random variable 
 X ~ Binomial(n,p), where n : positive integer, $`0 \leq p \leq 1`$
 Range : {0,1,2, ... n}
-PMF = $`f_x(k) = nC_k p^k (1-p)^{n-k}`$
+PMF = $`f_x(k) = nC_k p^k (1-p)^{n-k}`$                            
 
 Example 
 - Number of successes in n independent Bernoulli(p) trials.
@@ -228,4 +228,38 @@ Let f(x) be a
  Suppose X and Y are discrete variables defined in the same proability space. Let the rage of X and Y be $`T_x`$ and $`T_y`$, respectively. The joint PMF of X and Y, denoted $`f_{XY}`$, is a function from $`T_x \times T_y`$ to [0,1] defined as 
  $`f_{XY}(t_1, t_2) = P(X = t_1 and Y = t_2), t_1 \in T_X, t_2 \in T_Y`$
 - Joint PMF is usually written as a table or a matrix
-- 
+- P(X= t_1 and Y = t_2)
+
+Two random variable : Marginal PMF
+Supposse X and Y are jointly random variables with joint PMF f_{XY}. The PMF of individual variables X and Y are called as marginal PMFs. It can be shown that 
+$`f_X(t) = P(X = t) = \sum_(t' \in T_Y f_{XY}(t,t')`$
+$`f_Y(t) = P(Y = t) = \sum_(t' \in T_X f_{XY}(t,t')`$
+Where $`T_X`$ and $`T_Y`$ are ranges of X and Y, respectively 
+
+- supposse $`T_Y`$ = {$`v_1, v_2, ... , y_k`$}
+- $`(X=t) = (X=t \text{ and } Y = y_1) \text{or ... or } (X=t \text{ and } Y = y_k)`$
+- Note that the marginal PMF is simply a PMF
+- From joint we can drive the values for marginal from marginal, it is not possible to get the values of joint
+
+## Conditional distribution of a random variable given an event
+
+Suppose X is discrete random variable with range $`T_X`$ , and A is an event in the same probability space. the conditional PMF of X is given A is defined as the PMF. 
+$`Q(t) =  = P(X = t |A), t \in T_X`$
+We will use notation $`f_{x|A}(t) `$ for the above conditional PMF, and (X|A) to denote the"conditional" random variable
+$`f_{x|A} = \frac{P((X=t) \cap A)}{P(A)}`$
+- Range of (X|A) can be different from T_x and will depend on A
+
+
+### conditional distribution of one random variable given another
+Supposse X and Y are jointly distributed discrete random variable with joint PMF $`f_{XY}`$. The conditional PMF of Y given X = t is defined as teh PMF 
+$`Q(t') = P(Y = t' | X = t) = \frac{Y = t' | X=t}{P(X=t)} = \frac{f_{XY}(t, t')}{f_x(t)}`$
+
+We will use the notation $`f_{Y|X = t(t')}`$ for the above conditional PMF, and (Y|X = t) to denote the "conditional" random variable
+$`f_{XY}(t, t') = f_{Y|X= t}(t') f_x(t)`$
+
+## More discrete Variable 
+
+edit is later
+
+
+# Independence of two random variable

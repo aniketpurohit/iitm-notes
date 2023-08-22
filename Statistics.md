@@ -263,3 +263,18 @@ edit is later
 
 
 # Independence of two random variable
+Let X and Y are two random variables defined in a proababillity space with ranges $`T_x`$ and $`T_y`$, respectively. X and Y are said to be independent if an y event defined using X alone is independent of any event defined using Y alone. Equivalently, if the joint PMF of X and Y is $`f_{XY}`$, X and Y are independent if 
+$`f_{XY}(t_1, t_2) = f_x(t_1)f_y(t_2)`$ for $`t_1 \in T_x, t_2 \in T_y`$
+
+- General case
+  -   $`f_{xy}(t_1,t_2)  = f_X(t_1)f_{Y|X = t1} (t_2)`$ (always true)
+  -   Independent : $`f_{Y|X t_2}(t_2) = f_y(t_2)`$
+ 
+If X and Y are independent
+- joint PMF equals product of marginal PMFs.
+- Conditional PMF equals marginal PMF.
+
+### Independent vs dependent random variables
+- To show X and Y are idenpendent, verify $`f_{XY}(t_1, t_2) = f_X(t_1)f_Y(t_2)`$ for all $`t_1 \in T_X, t_2 \in T_Y`$
+- To show X and Y are dependent, verify $`f_{XY}(t_1, t_2) \neq f_X(t_1)f_Y(t_2)`$ for some $`t_1 \in T_X, t_2 \in T_Y`$
+- Special case: $`f_{XY}(t_1, t_2) = 0 `$ when $`f_X(t_1) \neq 0 , f_Y(t_2) \neq 0 `$ 

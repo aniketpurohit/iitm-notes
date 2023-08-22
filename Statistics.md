@@ -277,4 +277,18 @@ If X and Y are independent
 ### Independent vs dependent random variables
 - To show X and Y are idenpendent, verify $`f_{XY}(t_1, t_2) = f_X(t_1)f_Y(t_2)`$ for all $`t_1 \in T_X, t_2 \in T_Y`$
 - To show X and Y are dependent, verify $`f_{XY}(t_1, t_2) \neq f_X(t_1)f_Y(t_2)`$ for some $`t_1 \in T_X, t_2 \in T_Y`$
-- Special case: $`f_{XY}(t_1, t_2) = 0 `$ when $`f_X(t_1) \neq 0 , f_Y(t_2) \neq 0 `$ 
+- Special case: $`f_{XY}(t_1, t_2) = 0 `$ when $`f_X(t_1) \neq 0 , f_Y(t_2) \neq 0 `$
+
+**Multiple Random Variable**
+Let $`X_1, ...., X_n`$ be random variables defined in a probability space with range of $`X_i`$ denoted $`T_x_i`$. $`X_1, .. X_n`$ are said to be independent if  events defined using different $`X_i`$ are mutually independent. Equivalency, $`X_1, .. , X_n`$ are independent iff 
+$`f_{x_1, .... ,x_n} = f_x_1 (t_1) f_x_2(t_2) .... f_x_n(t_n) `$
+if X and Y are independent 
+- Joint PMF equals product of marginal PMFs
+- Condtional PMF equals unconditioned PMF
+All  subsets of independent random variables are independent.
+
+## idependent identically distributed.
+Random variables $`X_1, ... , X_n`$ are said to be independent and identically distributed (i.i.d) if 
+1. They are independent
+2. The marginal  PMFs $`f_x_i`$ are indentical .
+3. 

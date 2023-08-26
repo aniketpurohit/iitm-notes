@@ -418,3 +418,36 @@ X|Z = P(X=k| Z=n) = Binomial(n , $`\frac{\lambda _1}{\lambda _1 + \lambda _2}`$)
 
 Y|Z = P(Y=k| Z=n) = Binomial(n,$`\frac{\lambda _2}{\lambda _1 + \lambda _2}`$)
 
+## Independent case; Cumulative distribution function (CDF) of maximum.
+Cumlative distribution function of a random variable X is a function $`F_X ; \R \rightarrow [0,1] defined as`$
+$`F_X(x) = P(X \leq x)`$
+
+Suppose X and Y are independent and Z = max(X,Y)
+
+
+
+# Excepted value of a discrete random variable
+Suppose X is a discrete random variable with range $`T_X`$ and PMF $`f_x`$. The expected value of X, denoted E[X], is defined as 
+E[X] = $`\sum_{t \in T_X} t f_x(t)`$
+
+- other names: mean of X
+- E[X] may or may not belong to the range of X
+- E[X]  has the same units as X
+
+X ~ Bernoulli(P)
+E[X]  = 0(1-p) + 1(p) = p
+
+X ~ Uniform{1,2,3,4,5,6}
+E[X] = $`1.\frac{1}{6} + 2. \frac{1}{6} +3.\frac{1}{6} + 4.\frac{1}{6} + 5. \frac{1}{6} + 6.\frac{1}{6}`$
+
+value of a lottery ticket (in RS) is {200, 20 ,0}
+
+
+X ~ Uniform{a,a+1,a+2...b}
+E[X] = $`\frac{a+b}{2}`$
+
+X ~ Geometric(p)
+E[X] = $`\sum_{t=1}^{\infty} t(1-p)^{t-1}p`$
+
+X ~ Poisson($`\lambda`$)
+E[X] = $`\sum_{t=0}{\infty} t e^{-\lamda} \frac{\lambda ^t}{t!}`$

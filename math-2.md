@@ -141,7 +141,7 @@ A homogeneous  syste m of linear equation with n eqaution s in n unknowns
 
 A general system of m linear equation with n unknowns can be written as
 
-$`begin\equation a_{11} x_1 + a_{12} x_2 + a_{13} x_3 = b1 \\ a_{21} x_1 + a_{22} x_2 +...+ a_{23} x_3 = b2\\ . \\ .\\ . \\ a_{m1} x_1 + a_{m2} x_2 + a_{mn} x_n = b1`$
+$`\begin{equation} a_{11} x_1 + a_{12} x_2 + a_{13} x_3 = b1 \\ a_{21} x_1 + a_{22} x_2 +...+ a_{23} x_3 = b2\\ . \\ .\\ . \\ a_{m1} x_1 + a_{m2} x_2 + a_{mn} x_n = b1 \end {equation} `$
 
 Matrix representaion of this system of linear eqaution is Ax=b where
 ![Alt text](./img/matrix-representaton.png)

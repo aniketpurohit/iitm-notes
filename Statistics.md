@@ -354,7 +354,7 @@ P(Y = f(x)) = P(X =x)
 For two or more different input, the function should result in the same output.
 
 - In the plot of y = f(x) versus x, some horizontal line intersects the curve at more than one point.
-- Non-monotonic functions are many-to-one 
+- Non-monotonic functions are many-to-one
 - Example : $`y =x^2, y = x(1-x), y = xe^{-x}`$
 
 if f is many-to-one
@@ -369,7 +369,7 @@ if f is many-to-one
 - Countours 1
   - values of (x,y) that result in g(x,y) = c
   - make plot of those (x,y) for different c
-- regions 
+- regions
   - values of (x,y) that result in g(x,y) = c
   - make a plot of those (x,y) for differnt c
 
@@ -380,7 +380,8 @@ Conturs are quite useful in many problems
 ### Function of two random variables
 
 let Z = g(x,y) be a function of X and Y
-For PMF of Z 
+For PMF of Z
+
 - find the range of Z
   - All possible values for g(x,y), $`x \in X , y \in Y`$
 - add over the contours
@@ -391,6 +392,7 @@ For PMF of Z
 **Uniform {1, .. n}:**
 
 X,Y ~ iid Uniform {1,2... n}, W = X+Y
+
 1. Sum
 
   $`P(W=w) = \begin{aligned} \frac{w-1}{n^2} & 2 \leq w \leq n+1, \\ \frac{2n-w+1}{n^2}, & n+2 \leq w \leq 2n \end{aligned}`$
@@ -398,12 +400,12 @@ X,Y ~ iid Uniform {1,2... n}, W = X+Y
 2. Max
 $`P(Z=z) = \frac{2z-1}{n^2}`$
 
-
 ## Sum of two random varaible taking integer values
+
 Suppose X and Y take integer values and let their joint PMF be $`f_XY`$. Let Z = X+Y
 P(Z=z) = P(X+Y = z) = $`\sum_{x=-\infty}^\infty P(X=x, Y= z-x)`$ = $`\sum_{x=-\infty}^\infty f_{XY}(x,z-x)`$ = $`\sum_{y=-\infty}^\infty P(z-y,y)`$
 
-**Convolution** : If X and Y are independent, 
+**Convolution** : If X and Y are independent,
 $`f_{X+Y}(z) = \sum_{x=-\infty}^\infty f_{x}(x)f_Y(z-x)`$
 
 > Sum of two independent possions
@@ -413,21 +415,21 @@ Let X~ Poisson($`\lambda _{1}`$) and Y ~ Poisson($`\lambda_2`$) be independent.
 Sum of Z = X+Y where $`Z \in {0,1,2 ...}`$
 = Poisson($`\lambda _1 + \lambda_2`$)
 
-Conditional distribution 
-X|Z = P(X=k| Z=n) = Binomial(n , $`\frac{\lambda _1}{\lambda _1 + \lambda _2}`$)
+Conditional distribution
+X|Z = P(X=k| Z=n) = Binomial(n , $`\frac{\lambda _1}{\lambda_1 + \lambda _2}`$)
 
-Y|Z = P(Y=k| Z=n) = Binomial(n,$`\frac{\lambda _2}{\lambda _1 + \lambda _2}`$)
+Y|Z = P(Y=k| Z=n) = Binomial(n,$`\frac{\lambda _2}{\lambda_1 + \lambda _2}`$)
 
-## Independent case; Cumulative distribution function (CDF) of maximum.
+## Independent case; Cumulative distribution function (CDF) of maximum
+
 Cumlative distribution function of a random variable X is a function $`F_X ; \R \rightarrow [0,1] defined as`$
 $`F_X(x) = P(X \leq x)`$
 
 Suppose X and Y are independent and Z = max(X,Y)
 
-
-
 # Excepted value of a discrete random variable
-Suppose X is a discrete random variable with range $`T_X`$ and PMF $`f_x`$. The expected value of X, denoted E[X], is defined as 
+
+Suppose X is a discrete random variable with range $`T_X`$ and PMF $`f_x`$. The expected value of X, denoted E[X], is defined as
 E[X] = $`\sum_{t \in T_X} t f_x(t)`$
 
 - other names: mean of X
@@ -441,7 +443,6 @@ X ~ Uniform{1,2,3,4,5,6}
 E[X] = $`1.\frac{1}{6} + 2. \frac{1}{6} +3.\frac{1}{6} + 4.\frac{1}{6} + 5. \frac{1}{6} + 6.\frac{1}{6}`$
 
 value of a lottery ticket (in RS) is {200, 20 ,0}
-
 
 X ~ Uniform{a,a+1,a+2...b}
 E[X] = $`\frac{a+b}{2}`$

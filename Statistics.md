@@ -452,3 +452,4 @@ E[X] = $`\sum_{t=1}^{\infty} t(1-p)^{t-1}p`$
 
 X ~ Poisson($`\lambda`$)
 E[X] = $`\sum_{t=0}{\infty} t e^{-\lamda} \frac{\lambda ^t}{t!}`$
+

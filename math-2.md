@@ -6,7 +6,7 @@ A matrix is a rectangular array of number, arranged in rows and columns.
 Example : [ [ 1,2,3 ], [ 2,3,4 ] ]
 This is a $`2 \times 3`$ (2 rows and 3 columns)
 
-- An $`m \times n`$ has m rows and n columns
+- An $m \times n$ has m rows and n columns
 - (i,j)-th entry of a matrix is the entry occuring in the i-th row and j-th column
 
 #### Square matix
@@ -141,7 +141,7 @@ A homogeneous  syste m of linear equation with n eqaution s in n unknowns
 
 A general system of m linear equation with n unknowns can be written as
 
-$`\begin{equation} a_{11} x_1 + a_{12} x_2 + a_{13} x_3 = b1 \\ a_{21} x_1 + a_{22} x_2 +...+ a_{23} x_3 = b2\\ . \\ .\\ . \\ a_{m1} x_1 + a_{m2} x_2 + a_{mn} x_n = b1 \end {equation} `$
+$`\begin{equation} a_{11} x_1 + a_{12} x_2 + a_{13} x_3 = b1 \\ a_{21} x_1 + a_{22} x_2 +...+ a_{23} x_3 = b2\\ . \\ .\\ . \\ a_{m1} x_1 + a_{m2} x_2 + a_{mn} x_n = b1 \end {equation}`$
 
 Matrix representaion of this system of linear eqaution is Ax=b where
 ![Alt text](./img/matrix-representaton.png)
@@ -243,3 +243,92 @@ In a homogeneous system of equations, if there are more variables that equations
 ***Computing the inverse***
 
 Computing the inverse of an invertibel matrix A is equivalent to : finding solution of $`A_x = [1.0.0]`$, $`A_y =[0,1,0]`$, $`A_z = [0,0,1]`$
+
+# Vector space
+
+Consider vectors ($`x_1,x_2,x_3 ..., x_n`$) in $`\R^n`$ and $`c \in \R`$
+
+- Recall addition and scalar multiplication of these vectors is defined as
+
+**Properties**
+let v, w and v' bec vectors in $`\R^n`$ and a,b $`\in \R`$
+
+1. v+w = w+v
+2. (v+w) + v' = v +(w+v')
+3. the 0 vector statisfies v+0 = 0+v = v
+4. the vector -v satisfies v +(-v) = 0
+5. 1v = v
+6. (ab) v = a(bv)
+7. a(v+w) = av +bw
+8. (a+b)v = av+bv
+
+A vector space is a set of two operations (called addition and scalar multiplication with above properties 1-7)
+
+It is standard to supress the . and only write cv instead of c.v
+the function + and . are required to statify the following rules:
+
+Example
+
+- $`v_1 + v_2 = v_2 + v1`$  for all $`v_1, v_2  \in V`$
+
+### Linear combinations of vectors
+
+Let V be a vector space and $`v_1, v_2 ,..., v_n \in V`$. The linear combination of $`v_1, v_2, ... v_n`$ with coefficient $`a_1, a_2, ..., a_n \in R`$ is the vector $`\sum_{i=1}{n} a_i v_i \in V`$
+
+A vector $`v \in V`$ in a linear combination of $`v_1, v_2 ,..., v_n`$ if there exist some $`a_1, a_2, ... ,a_n \in R`$ that $`v = \sum_{i=1}^n a_i v_i`$
+
+#### Linear dependence
+
+A set of vectors $`v_1, v_2, ... , v_n`$ from a vector spacce V is said to be linearly dependent, if exist scalars $`a_1, a_2, ..., a_n`$ not all space such that
+$`a_1v_1 + a_2v_2 + ... + a_n v_n = 0`$
+
+Equivalent, the 0 vector is a linear combination of $`v_1, v_2, ..., v_n`$ with non-zero coefficients.
+
+Example :
+Consider the followinf vectors in $`\R^3`$ (2,3,7) and ($`\frac{5}{3}, \frac{5}{2} , \frac{35}{6}`$)
+It is easy to check that 5(2,3,7) - 6($`\frac{5}{3}, \frac{5}{2} , \frac{35}{6}`$) = (0,0,0)
+Hence these two vectors are linearly independent, Also observer that one is scalar multiple of the other.
+
+> If a set is linearly dependent, then so is every superset of it.
+
+TO check $`v_1, v_2, v_3 ... v_n \in \R^m`$ are linearly independent, we have to check that the homogenous system of linear equation Vx =0 has only the trivial solution, where the $`j^{th}`$ column of V id $`v_j`$
+
+### more than n vectors in R
+
+any set of r vectors in $`R^n`$ with r> n are linearly dependent.
+
+## Realtionaship with determinant
+
+To check whether a set of n vectors in $`R^n`$ are linearly independent. we have to finf solution of homogeneous system Vx = 0
+Where V is an $`n \times n`$ matrix obtained by arrainging the vectors in columns.
+Since V is sqaure matrix, it has unique solution x=0 if an only if V is invertible  if an donly if det(A) $`\neq`$ 0
+
+- If A is invertible then there exists $`A^{-1}`$ such that $`AA^{-1} = I = A^{-1}A`$. hence det(A).det($`A^{-1}`$)  =1 which implies det(A) $`\neq`$
+- Now if det(A) $`\neq`$ 0 then $`A^{-1} = \frac{1}{det(A)} adj(A)`$ exits
+![Alt text](./img/example-linear-independent.png)
+
+## Span of a set of vectors
+
+The span of a set S (of vectors ) is defined as the of all finite linear cobination of elements (vectors) of S, and denoted by _Span(S)_
+
+Span(S) = $`\sum_{i=1}^n a_i v_i \in V | a_1, a_2, ..., a_n \in \R`$
+Let S = {(1,0)} $`\subset \R^2`$. then Span(S) = {a(1,0) | $`a \in \R`$} = $`(a,o)|a \in \R`$
+Thus, Span(S) is the X-axis in $`\R^2`$
+
+### Spanning set of vector space
+
+Let V be a vector space. A set S $`\subseteqq`$ V is a spanning set for V if Span(S) = V
+
+Example
+
+- If S = {(1,0), (0,1)} the San(S) = $`R^2`$
+- If S = {(1,0), (0,1),(1,2)}, then Span(S) = $`R^2`$
+- If S = {(1,1), (0,1)} then Sapan(S) = $`R^2`$
+- If S = {(1,0,0),(0,1,0),(0,0,1)} then Span(S) = R^3
+
+**Adding vectors to obtain a spanning set for $`\R^3`$ .**
+we will start to build a spanning set for the vector space $`\R^3`$.
+Start with $`S_0`$ to be the empty set $`\emptyset`$. then Span($`S_0`$) = Span($`\emptyset`$) = {(0,0,0)}
+Since this not the full vector space,append a vector outside Span($`S_0`$) in $`\R^3`$ e.g. (0,2,1) to $`S_0`$ and call the new set $`S_1`$
+So, $`S_1 = S_0 \cup  \{(0,2,1)\}`$
+choose a vector from outside the Span(S) and append it to S_2 cna  fk

@@ -331,4 +331,36 @@ we will start to build a spanning set for the vector space $`\R^3`$.
 Start with $`S_0`$ to be the empty set $`\emptyset`$. then Span($`S_0`$) = Span($`\emptyset`$) = {(0,0,0)}
 Since this not the full vector space,append a vector outside Span($`S_0`$) in $`\R^3`$ e.g. (0,2,1) to $`S_0`$ and call the new set $`S_1`$
 So, $`S_1 = S_0 \cup  \{(0,2,1)\}`$
-choose a vector from outside the Span(S) and append it to S_2 cna  fk
+choose a vector from outside the Span(S) and append it to S_2 call the new set $`S_3`$. 
+
+### Basis 
+A basis B of a vector space V is linearly indpendent subsets of V that spans V.
+- B is linearly independent and Span(B) = V
+- B is  maximal linearly indpendent set.
+- B is a minimal spanning set.
+
+Equivalent : A basis of B of a vector space V is a subset B $`\subseteqq`$ V such that the every element of V can be uniquely written as a linear combination of elements of B.
+
+I.e. if B = {$`v_1, v_2 ,,, v_n`$} then for every $`v \in V`$, there is a unique set of scalars $`a_1, a_2, ... a_n \in \R`$ such that $`v= \sum_{i=1}^n a_iv_i`$
+
+
+## Rank/Dimension of vector space
+The dimension (or rank) of a vector space is the size(or cardinality) of a basis of the vector space.
+for this course, if B is basis of V, then the rank is the number of elements in B.
+For every vector space there exists a basis, and all bases of a vector space have the same number of elements (or cardinality)
+hence, the dimension (or rank) of a vector space(say V) is suniquely defined and denoted by _dim(V) or rank(V)_ respectively.
+
+The $`i^{th}`$ standard basis of vector in $`\R^n`$ $`e_i =(0,0,0,0,...1, ...0)`$
+recall that the set {$`e_1, e_2 ... e_n`}$ is basis of $`\R^n`$ called the standard basis. Hence the dimension of $`\R^n`$ is n.
+
+## rank of a matrix
+let A be an $`m \times n`$ matrix.
+- the column space of A is the subspace of $`R^n`$ spanned by the column vector of A.
+- the row space of A is the subspace of $`R^n`$ spanned by the row vector of A.
+- the dimension of the column space A is defined as column rank of A.
+- The dimension of row space is defined as the row rank of A.
+- fact; Column rank = Row rank and this number is called rank of A.
+
+
+
+

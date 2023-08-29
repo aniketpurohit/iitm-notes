@@ -361,6 +361,39 @@ let A be an $`m \times n`$ matrix.
 - The dimension of row space is defined as the row rank of A.
 - fact; Column rank = Row rank and this number is called rank of A.
 
+## the null space of a matrix 
+let A be a $`m \times n `$ matrix.
+the subspace W = {x $`\in R^n | Ax =0`$} of $`R^n`$ is called the solution space of the homogenous system of linear equation Ax = 0 or the null space of A.
+Note that the null space is a subspace of $`R^n`$. the dimension of the nullspace is called the nullity of A.
 
+- form a augmented matrix [A|b]
+- apply the same row reduction opertaions on the augmented matrix that are used to row reduce A to obtain the augmented matrix [R|c] where R is the matrix in reduced row echelon form obatined from A.
+- If the i-th column has the leadingentry of some row, we call $`x_i`$ a dependent variable.
+- If the i-th column does not have the leading entry of some row, we call $`x_i`$ an independent variable.
 
+***Nullity(A) = number of independent variables***
+- Assign abritary value to $`t_i`$ to the $`i^{th}`$ independent variable.
+- Compute the value of each dependent variables in terms of $`t_i`$ from the unique row it occurs in.
+- Every solution is obtained by letting $`t_iS`$ vary in $`R`$.
 
+  The vectors obtained by substituting $`t_i`$ = 1 and $`t_j = 0 \forall j \neq i`$ as i varies constitutes a basis of the null space of A.(i.e. the solution space Ax =0).
+
+  Notice that in our computation, since is homgenous, the augmented 0 vector remains unchaged during the row reduction process.
+  So we will drop the column augmented to the matrix while performing the row reduction computations and use it only for solving the dependent variables.
+
+### The rank-nullity theorem 
+Let A be an $`m \times n`$ matrix
+rank(A) is calculated a the number of non-zero rows of the matrix R in reduced row echleon form obatined by row reduction.
+Note that for a matrix R in the row echleon form, the number of non-zero rows = number of dependent variables for the corresponding homogemous system Rx = 0
+
+rank(A) = number of non-zero rows of R = number of dependent variables Rx =0
+nullity(A) = number of independent variables of Rx=0.
+Therefore, we have rank-nullity theorem 
+> For n $`m \times n`$ matrix A, rank(A) + nullity(A) =n
+
+### How to check if a set of n vectors is a basis of $`R^n`$
+- Use determinants
+  Suppose we are given n vectors of $`R^n`$
+  We write them as columns of a matrix, thus obtaining an $`n \times n`$ matrix.
+  If the determinat of the matrix is 0, then the given set of vectors does not form a basis, otherwise it forms a basis.
+  
